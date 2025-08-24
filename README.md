@@ -123,6 +123,11 @@ python -m tcuq.scripts.run_stream_eval \
   --out outputs/mnist_stream_eval.json
 
 
+
+---
+
+
+
 Installation
 
 Local
@@ -132,4 +137,4 @@ Installation
 pip install --upgrade pip
 pip install -r requirements.txt
 # optional: pip install -e . ```
-
+---
