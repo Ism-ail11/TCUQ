@@ -1,8 +1,1 @@
 
-cff-version: 1.2.0
-title: "TCUQ: Temporal Consistency-based Uncertainty for TinyML"
-authors:
-  - family-names: "Doe"
-    given-names: "Jane"
-license: MIT
-version: "1.0.0"
