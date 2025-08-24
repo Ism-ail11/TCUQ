@@ -128,8 +128,8 @@ Installation
 Local
 
 Installation
-python -m venv .venv && source .venv/bin/activate
+ ```python -m venv .venv && source .venv/bin/activate
 pip install --upgrade pip
 pip install -r requirements.txt
-# optional: pip install -e .
+# optional: pip install -e . ```
 
