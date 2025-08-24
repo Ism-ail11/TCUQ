@@ -56,6 +56,8 @@
 ---
 
 ## Repo Layout
+
+
 tcuq/
 ├─ README.md
 ├─ LICENSE
@@ -121,20 +123,3 @@ python -m tcuq.scripts.run_stream_eval \
   --tcuq_head outputs/mnist_head.pt \
   --config configs/eval_accdrop.yaml \
   --out outputs/mnist_stream_eval.json
-
-
-
----
-
-
-
-## Installation
-
-Local
-
-Installation
- ```python -m venv .venv && source .venv/bin/activate
-pip install --upgrade pip
-pip install -r requirements.txt
-# optional: pip install -e . ```
----
