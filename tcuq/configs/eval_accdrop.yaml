@@ -1,0 +1,23 @@
+exp_name: eval_accdrop_cifar10
+dataset: cifar10
+data_root: data
+output_dir: outputs/eval_accdrop
+seed: 1337
+
+temporal:
+  W: 16
+  lags: [1, 2, 4]
+  w_lags: [0.5, 0.3, 0.2]
+  alpha: 0.5
+  q_alpha: 0.1
+  warmup: 256
+
+stream:
+  corruption_types: [gaussian_noise, motion_blur, fog, jpeg, brightness]
+  severities: [1, 2, 3, 4, 5]
+  per_severity: 5000
+  id_fraction: 0.5      # mix ID and CID
+
+ckpt:
+  backbone: ckpts/cifar10_resnet8.pt
+  head: ckpts/cifar10_tcuq_head.pt

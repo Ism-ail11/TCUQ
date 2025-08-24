@@ -1,0 +1,11 @@
+dataset: speechcmd
+data_root: data
+model:
+  name: dscnn_speech
+  num_classes: 10
+eval:
+  window: 50
+  batch_size: 64
+  ckpt: runs/speechcmd/best.pt
+  corruptions: [gaussian_noise, air_absorption, band_pass, band_stop, high_pass, high_shelf, low_pass, low_shelf, peaking_filter, tanh_distortion, time_mask, time_stretch]
+  severities: [1,2,3,4,5]

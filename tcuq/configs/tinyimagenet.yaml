@@ -1,0 +1,21 @@
+exp_name: tinyimagenet_mnv2
+dataset: tinyimagenet
+data_root: data/tinyimagenet
+output_dir: outputs/tinyimagenet
+seed: 1337
+
+model:
+  name: mobilenetv2_tiny
+  num_classes: 200
+
+train:
+  epochs: 120
+  batch_size: 128
+  lr: 0.001
+  weight_decay: 5e-4
+
+val:
+  batch_size: 256
+
+ckpt:
+  path: ckpts/tinyimagenet_mnv2.pt

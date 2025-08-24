@@ -1,0 +1,11 @@
+
+version: 1
+root:
+  level: INFO
+handlers:
+  console:
+    class: logging.StreamHandler
+    level: INFO
+formatters:
+  simple:
+    format: "%(asctime)s | %(levelname)s | %(name)s | %(message)s"

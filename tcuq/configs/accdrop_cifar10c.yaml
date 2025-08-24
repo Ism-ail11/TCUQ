@@ -1,0 +1,11 @@
+dataset: cifar10
+data_root: data
+cifar10c_root: data/cifar10-c
+model:
+  name: resnet8_tiny
+  num_classes: 10
+eval:
+  window: 50
+  batch_size: 128
+  ckpt: runs/cifar10/best.pt
+  severity: 1

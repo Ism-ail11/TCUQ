@@ -1,0 +1,17 @@
+dataset: cifar10
+data_root: data
+model:
+  name: resnet8_tiny
+  num_classes: 10
+eval:
+  batch_size: 128
+  ckpt: runs/cifar10/best.pt
+  use_tcuq: true
+  window: 32
+  lags: [1,2,4]
+  w_mix: [0.5, 0.3, 0.2]
+  alpha_margin: 0.5
+  head_path: runs/cifar10/tcuq_head.json
+ood:
+  ood_dataset: cifar100   # or svhn | folder
+  ood_folder: ""          # set only when ood_dataset=folder

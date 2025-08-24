@@ -1,0 +1,13 @@
+dataset: speechcmd
+data_root: data
+model:
+  name: dscnn_speech
+  num_classes: 10
+eval:
+  ckpt: runs/speechcmd/best.pt
+  use_tcuq: true
+  window: 32
+  lags: [1,2,4]
+  w_mix: [0.5, 0.3, 0.2]
+  alpha_margin: 0.5
+  head_path: runs/speechcmd/tcuq_head.json

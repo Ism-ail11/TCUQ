@@ -1,0 +1,29 @@
+exp_name: tcuq_head_fit
+output_dir: outputs/head
+seed: 1337
+
+head:
+  alpha: 0.5            # blend in m_t proxy
+  l2: 1e-3              # L2 on logistic head weights
+  init: zero
+  max_iter: 200
+
+temporal:
+  W: 16
+  lags: [1, 2, 4]
+  w_lags: [0.5, 0.3, 0.2]
+
+quantile:
+  alpha: 0.1            # target exceedance (90% accept)
+  warmup: 256
+
+data_mix:
+  dataset: cifar10
+  split: devmix         # implement by drawing ID + corrupted
+  num_samples: 20000
+
+ckpt_in:
+  backbone: ckpts/cifar10_resnet8.pt
+
+ckpt_out:
+  head: ckpts/cifar10_tcuq_head.pt

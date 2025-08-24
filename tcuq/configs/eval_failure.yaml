@@ -1,0 +1,14 @@
+exp_name: eval_failure
+dataset: cifar10
+data_root: data
+output_dir: outputs/eval_failure
+seed: 1337
+
+failure:
+  id_split: test
+  ood_dataset: svhn   # use SVHN as OOD for CIFAR-10, downloaded via torchvision
+  batch_size: 256
+
+ckpt:
+  backbone: ckpts/cifar10_resnet8.pt
+  head: ckpts/cifar10_tcuq_head.pt

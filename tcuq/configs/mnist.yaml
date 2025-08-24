@@ -1,0 +1,22 @@
+exp_name: mnist_cnn4
+dataset: mnist
+data_root: data
+output_dir: outputs/mnist
+seed: 1337
+
+model:
+  name: cnn4_mnist
+  num_classes: 10
+
+train:
+  epochs: 20
+  batch_size: 256
+  lr: 0.001
+  weight_decay: 0.0
+  lr_decay: 0.99
+
+val:
+  batch_size: 512
+
+ckpt:
+  path: ckpts/mnist_cnn4.pt

@@ -1,0 +1,10 @@
+[project]
+name = "tcuq"
+version = "1.0.0"
+requires-python = ">=3.9"
+dependencies = []
+
+[tool.pytest.ini_options]
+minversion = "7.0"
+addopts = "-q"
+testpaths = ["tests"]

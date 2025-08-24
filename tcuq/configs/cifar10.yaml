@@ -1,0 +1,22 @@
+exp_name: cifar10_resnet8
+dataset: cifar10
+data_root: data
+output_dir: outputs/cifar10
+seed: 1337
+
+model:
+  name: resnet8_tiny
+  num_classes: 10
+
+train:
+  epochs: 100
+  batch_size: 128
+  lr: 0.001
+  weight_decay: 5e-4
+  lr_decay: 0.98
+
+val:
+  batch_size: 256
+
+ckpt:
+  path: ckpts/cifar10_resnet8.pt

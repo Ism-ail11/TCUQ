@@ -1,0 +1,21 @@
+exp_name: speechcmd_dscnn
+dataset: speechcmd
+data_root: data
+output_dir: outputs/speechcmd
+seed: 1337
+
+model:
+  name: dscnn_speech
+  num_classes: 10
+
+train:
+  epochs: 10
+  batch_size: 100
+  lr: 0.0005
+  weight_decay: 0.0
+
+val:
+  batch_size: 200
+
+ckpt:
+  path: ckpts/speechcmd_dscnn.pt
