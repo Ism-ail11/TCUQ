@@ -57,7 +57,7 @@
 
 ## Repo Layout
 
-
+```
 tcuq/
 ├─ README.md
 ├─ LICENSE
@@ -94,10 +94,7 @@ tcuq/
 ├─ data/ (git-ignored)
 ├─ outputs/ (git-ignored)
 └─ tests/ # minimal unit tests
-
-
-
----
+```
 
 ## Quickstart
 ```bash
